@@ -18,7 +18,7 @@ public class StateExpression implements State<StateExpression.States>{
 
     private States state_now_ = States.CLEAR;
 
-    private final Map<States, List<States>> states_ = Map.of(
+    private static final Map<States, List<States>> states_ = Map.of(
             States.STAPLES,
             List.of(States.STAPLES,States.MINES,States.FIRST_ZERO,States.NUMBER,States.BACK,States.CLEAR),
             States.PLUS,
@@ -46,6 +46,7 @@ public class StateExpression implements State<StateExpression.States>{
     public States getState(){
         return state_now_;
     }
+
 
     @Override
     public boolean transit(States states) {
