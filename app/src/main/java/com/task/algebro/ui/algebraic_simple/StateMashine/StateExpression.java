@@ -5,6 +5,7 @@ import java.util.Map;
 
 public class StateExpression implements State<StateExpression.States>{
     public enum States{
+        NOPE,
         STAPLES,
         FIRST_ZERO,
         MINES,
